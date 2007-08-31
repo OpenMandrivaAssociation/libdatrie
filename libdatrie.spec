@@ -5,7 +5,7 @@
 Summary:	Double-array structure for representing trie
 Name:		libdatrie
 Version:	0.1.1
-Release:	%mkrel 3
+Release:	%mkrel 4
 License:	LGPL
 Group:		System/Libraries
 URL:		http://linux.thai.net
@@ -53,10 +53,7 @@ Group:		Development/C
 Requires:	%{libname} = %{version}
 Requires:	pkgconfig
 Provides:	datrie-devel = %{version}
-%if "%{_lib}" != "lib"
 Provides:	%{name}-devel = %{version}-%{release}
-%endif
-Provides:	%{mklibname datrie 0 -d} = %{version}
 Obsoletes:	%{mklibname datrie 0 -d}
 
 %description -n	%{develname}
