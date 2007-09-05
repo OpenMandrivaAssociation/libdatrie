@@ -4,8 +4,8 @@
 
 Summary:	Double-array structure for representing trie
 Name:		libdatrie
-Version:	0.1.1
-Release:	%mkrel 4
+Version:	0.1.2
+Release:	%mkrel 1
 License:	LGPL
 Group:		System/Libraries
 URL:		http://linux.thai.net
