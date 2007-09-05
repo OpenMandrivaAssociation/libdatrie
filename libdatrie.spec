@@ -102,3 +102,4 @@ rm -rf %{buildroot}
 %{_libdir}/lib*.a
 %{_libdir}/pkgconfig/*
 %{_datadir}/doc/datrie/
+%_mandir/man*/*
