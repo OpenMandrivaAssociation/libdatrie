@@ -14,7 +14,6 @@ BuildRequires:	automake
 BuildRequires:	doxygen
 BuildRequires:	libtool
 BuildRequires:	pkgconfig
-BuildRoot:	%{_tmppath}/%{name}-%{version}-root
 
 %description
 This is an implementation of double-array structure for representing trie.
