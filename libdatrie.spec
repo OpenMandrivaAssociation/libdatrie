@@ -12,7 +12,6 @@ URL:		http://linux.thai.net
 Source0:	ftp://linux.thai.net/pub/thailinux/software/libthai/%name-%version.tar.bz2
 BuildRequires:	automake
 BuildRequires:	doxygen
-BuildRequires:	libtool
 BuildRequires:	pkgconfig
 BuildRoot:	%{_tmppath}/%{name}-%{version}-root
 
@@ -64,11 +63,10 @@ Install libdatrie-devel if you want to develop programs which will use
 libdatrie.
 
 %prep
-
 %setup -q
 
 %build
-%configure
+%configure2_5x
 %make
 
 %install
