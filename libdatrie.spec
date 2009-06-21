@@ -1,15 +1,15 @@
-%define major 0
+%define major 1
 %define libname %mklibname datrie %{major}
 %define develname %mklibname datrie -d
 
 Summary:	Double-array structure for representing trie
 Name:		libdatrie
-Version:	0.1.3
-Release:	%mkrel 2
+Version:	0.2.2
+Release:	%mkrel 1
 License:	LGPL
 Group:		System/Libraries
 URL:		http://linux.thai.net
-Source0:	ftp://linux.thai.net/pub/thailinux/software/libthai/%name-%version.tar.bz2
+Source0:	ftp://linux.thai.net/pub/thailinux/software/libthai/%name-%version.tar.gz
 BuildRequires:	automake
 BuildRequires:	doxygen
 BuildRequires:	pkgconfig
@@ -94,11 +94,12 @@ rm -rf %{buildroot}
 
 %files -n %{libname}
 %defattr(-,root,root)
-%doc README AUTHORS COPYING NEWS
 %{_libdir}/lib*.so.%{major}*
 
 %files -n %{develname}
 %defattr(-,root,root)
+%doc README AUTHORS COPYING NEWS
+%{_docdir}/%{name}/README.migration
 %{_includedir}/datrie
 %{_libdir}/lib*.so
 %{_libdir}/lib*.a
