@@ -5,8 +5,8 @@
 Summary:	Double-array structure for representing trie
 Name:		libdatrie
 Version:	0.2.2
-Release:	%mkrel 1
-License:	LGPL
+Release:	%mkrel 2
+License:	LGPLv2+ and GPLv2+
 Group:		System/Libraries
 URL:		http://linux.thai.net
 Source0:	ftp://linux.thai.net/pub/thailinux/software/libthai/%name-%version.tar.gz
@@ -90,7 +90,7 @@ rm -rf %{buildroot}
 %files -n trietool
 %defattr(-,root,root)
 %{_bindir}/*
-%{_mandir}/man1/*
+%{_mandir}/man1/trietool*.1*
 
 %files -n %{libname}
 %defattr(-,root,root)
@@ -98,11 +98,10 @@ rm -rf %{buildroot}
 
 %files -n %{develname}
 %defattr(-,root,root)
-%doc README AUTHORS COPYING NEWS
+%doc README AUTHORS NEWS
 %{_docdir}/%{name}/README.migration
 %{_includedir}/datrie
 %{_libdir}/lib*.so
 %{_libdir}/lib*.a
 %{_libdir}/pkgconfig/*
 %{_datadir}/doc/datrie/
-%_mandir/man*/*
