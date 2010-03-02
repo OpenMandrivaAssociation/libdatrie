@@ -4,13 +4,12 @@
 
 Summary:	Double-array structure for representing trie
 Name:		libdatrie
-Version:	0.2.2
-Release:	%mkrel 2
+Version:	0.2.3
+Release:	%mkrel 1
 License:	LGPLv2+ and GPLv2+
 Group:		System/Libraries
 URL:		http://linux.thai.net
 Source0:	ftp://linux.thai.net/pub/thailinux/software/libthai/%name-%version.tar.gz
-BuildRequires:	automake
 BuildRequires:	doxygen
 BuildRequires:	pkgconfig
 BuildRoot:	%{_tmppath}/%{name}-%{version}-root
