@@ -1,6 +1,6 @@
-%define major 1
-%define libname %mklibname datrie %{major}
-%define develname %mklibname datrie -d
+%define	major	1
+%define	libname	%mklibname datrie %{major}
+%define	devname	%mklibname datrie -d
 
 Summary:	Double-array structure for representing trie
 Name:		libdatrie
@@ -9,10 +9,9 @@ Release:	1
 License:	LGPLv2+ and GPLv2+
 Group:		System/Libraries
 URL:		http://linux.thai.net
-Source0:	ftp://linux.thai.net/pub/thailinux/software/libthai/%name-%version.tar.gz
+Source0:	ftp://linux.thai.net/pub/thailinux/software/libthai/%{name}-%{version}.tar.gz
 BuildRequires:	doxygen
 BuildRequires:	pkgconfig
-BuildRoot:	%{_tmppath}/%{name}-%{version}-root
 
 %description
 This is an implementation of double-array structure for representing trie.
@@ -45,7 +44,7 @@ trie also provides flexibility on incremental matching and key spelling
 manipulation. This makes it ideal for lexical analyzers, as well as spelling
 dictionaries.
 
-%package -n	%{develname}
+%package -n	%{devname}
 Summary:	Double-array structure for representing trie
 Group:		Development/C
 Requires:	%{libname} = %{version}
@@ -54,7 +53,7 @@ Provides:	datrie-devel = %{version}
 Provides:	%{name}-devel = %{version}-%{release}
 Obsoletes:	%{mklibname datrie 0 -d}
 
-%description -n	%{develname}
+%description -n	%{devname}
 This package includes the header files and developer docs for the libdatrie
 package.
 
@@ -69,38 +68,22 @@ libdatrie.
 %make
 
 %install
-rm -rf %{buildroot}
-
 %makeinstall_std
 
 rm %{buildroot}%{_libdir}/*.la
 
-%if %mdkversion < 200900
-%post   -n %{libname} -p /sbin/ldconfig
-%endif
-
-%if %mdkversion < 200900
-%postun -n %{libname} -p /sbin/ldconfig
-%endif
-
-%clean
-rm -rf %{buildroot}
-
 %files -n trietool
-%defattr(-,root,root)
-%{_bindir}/*
+%{_bindir}/trietool*
 %{_mandir}/man1/trietool*.1*
 
 %files -n %{libname}
-%defattr(-,root,root)
-%{_libdir}/lib*.so.%{major}*
+%{_libdir}/libdatrie.so.%{major}*
 
-%files -n %{develname}
-%defattr(-,root,root)
+%files -n %{devname}
 %doc README AUTHORS NEWS
 %{_docdir}/%{name}/README.migration
 %{_includedir}/datrie
-%{_libdir}/lib*.so
-%{_libdir}/lib*.a
+%{_libdir}/libdatrie.so
+%{_libdir}/libdatrie.a
 %{_libdir}/pkgconfig/*
 %{_datadir}/doc/datrie/
