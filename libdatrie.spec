@@ -25,7 +25,7 @@ dictionaries.
 %package -n	trietool
 Summary:	Trie manipulation tool
 Group:		Databases
-Provides:	%{name} = %{version}
+Provides:	%{name} = %{EVRD}
 
 %description -n	trietool
 Trietool is a trie manipulation tool.
@@ -33,7 +33,7 @@ Trietool is a trie manipulation tool.
 %package -n	%{libname}
 Summary:	Double-array structure for representing trie
 Group:		System/Libraries
-Provides:	%{name} = %{version}
+Provides:	%{name} = %{EVRD}
 
 %description -n	%{libname}
 This is an implementation of double-array structure for representing trie.
@@ -47,10 +47,10 @@ dictionaries.
 %package -n	%{devname}
 Summary:	Double-array structure for representing trie
 Group:		Development/C
-Requires:	%{libname} = %{version}
+Requires:	%{libname} = %{EVRD}
 Requires:	pkgconfig
-Provides:	datrie-devel = %{version}
-Provides:	%{name}-devel = %{version}-%{release}
+Provides:	datrie-devel = %{EVRD}
+Provides:	%{name}-devel = %{EVRD}
 Obsoletes:	%{mklibname datrie 0 -d}
 
 %description -n	%{devname}
