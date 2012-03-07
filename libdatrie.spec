@@ -33,7 +33,6 @@ Trietool is a trie manipulation tool.
 %package -n	%{libname}
 Summary:	Double-array structure for representing trie
 Group:		System/Libraries
-Provides:	%{name} = %{EVRD}
 
 %description -n	%{libname}
 This is an implementation of double-array structure for representing trie.
