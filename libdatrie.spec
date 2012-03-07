@@ -47,7 +47,6 @@ dictionaries.
 Summary:	Double-array structure for representing trie
 Group:		Development/C
 Requires:	%{libname} = %{EVRD}
-Requires:	pkgconfig
 Provides:	datrie-devel = %{EVRD}
 Provides:	%{name}-devel = %{EVRD}
 Obsoletes:	%{mklibname datrie 0 -d}
