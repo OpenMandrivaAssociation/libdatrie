@@ -8,7 +8,7 @@ Version:	0.2.6
 Release:	1
 License:	LGPLv2+ and GPLv2+
 Group:		System/Libraries
-URL:		http://linux.thai.net
+Url:		http://linux.thai.net
 Source0:	ftp://linux.thai.net/pub/thailinux/software/libthai/%{name}-%{version}.tar.xz
 BuildRequires:	doxygen
 BuildRequires:	pkgconfig
@@ -49,26 +49,21 @@ Group:		Development/C
 Requires:	%{libname} = %{EVRD}
 Provides:	datrie-devel = %{EVRD}
 Provides:	%{name}-devel = %{EVRD}
-Obsoletes:	%{mklibname datrie 0 -d}
 
 %description -n	%{devname}
 This package includes the header files and developer docs for the libdatrie
 package.
 
-Install libdatrie-devel if you want to develop programs which will use
-libdatrie.
-
 %prep
 %setup -q
 
 %build
-%configure2_5x
+%configure2_5x \
+	--disable-static
 %make
 
 %install
 %makeinstall_std
-
-rm %{buildroot}%{_libdir}/*.la
 
 %files -n trietool
 %{_bindir}/trietool*
@@ -82,6 +77,6 @@ rm %{buildroot}%{_libdir}/*.la
 %{_docdir}/%{name}/README.migration
 %{_includedir}/datrie
 %{_libdir}/libdatrie.so
-%{_libdir}/libdatrie.a
 %{_libdir}/pkgconfig/*
 %{_datadir}/doc/datrie/
+
