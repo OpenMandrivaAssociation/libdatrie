@@ -5,7 +5,7 @@
 Summary:	Double-array structure for representing trie
 Name:		libdatrie
 Version:	0.2.6
-Release:	4
+Release:	5
 License:	LGPLv2+ and GPLv2+
 Group:		System/Libraries
 Url:		http://linux.thai.net
