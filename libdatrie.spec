@@ -5,6 +5,7 @@
 Summary:	Double-array structure for representing trie
 
 
+
 Name:		libdatrie
 Version:	0.2.6
 Release:	9
@@ -28,6 +29,7 @@ dictionaries.
 Summary:	Trie manipulation tool
 
 
+
 Group:		Databases
 Provides:	%{name} = %{EVRD}
 
@@ -36,6 +38,7 @@ Trietool is a trie manipulation tool.
 
 %package -n	%{libname}
 Summary:	Double-array structure for representing trie
+
 
 
 Group:		System/Libraries
@@ -51,6 +54,7 @@ dictionaries.
 
 %package -n	%{devname}
 Summary:	Double-array structure for representing trie
+
 
 
 Group:		Development/C
