@@ -3,12 +3,9 @@
 %define	devname	%mklibname datrie -d
 
 Summary:	Double-array structure for representing trie
-
-
-
 Name:		libdatrie
-Version:	0.2.6
-Release:	16
+Version:	0.2.9
+Release:	1
 License:	LGPLv2+ and GPLv2+
 Group:		System/Libraries
 Url:		http://linux.thai.net
@@ -90,6 +87,3 @@ package.
 %{_includedir}/datrie
 %{_libdir}/libdatrie.so
 %{_libdir}/pkgconfig/*
-%{_datadir}/doc/datrie/
-
-
