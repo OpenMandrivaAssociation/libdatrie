@@ -4,7 +4,7 @@
 
 Summary:	Double-array structure for representing trie
 Name:		libdatrie
-Version:	0.2.9
+Version:	0.2.12
 Release:	1
 License:	LGPLv2+ and GPLv2+
 Group:		System/Libraries
@@ -67,12 +67,14 @@ package.
 %setup -q
 
 %build
-%configure2_5x \
+%configure \
 	--disable-static
 %make
 
 %install
 %makeinstall_std
+
+rm -rf %{buildroot}%{_datadir}/doc/datrie/html
 
 %files -n trietool
 %{_bindir}/trietool*
