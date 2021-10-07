@@ -2,6 +2,8 @@
 %define	libname	%mklibname datrie %{major}
 %define	devname	%mklibname datrie -d
 
+%define _disable_rebuild_configure 1
+
 Summary:	Double-array structure for representing trie
 Name:		libdatrie
 Version:	0.2.13
@@ -58,8 +60,8 @@ package.
 %autosetup -p1
 
 %build
-%configure \
-	--disable-static
+%configure
+
 %make_build
 
 %install
