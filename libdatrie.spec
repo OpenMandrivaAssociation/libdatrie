@@ -4,12 +4,12 @@
 
 Summary:	Double-array structure for representing trie
 Name:		libdatrie
-Version:	0.2.12
+Version:	0.2.13
 Release:	1
 License:	LGPLv2+ and GPLv2+
 Group:		System/Libraries
 Url:		http://linux.thai.net
-Source0:	ftp://linux.thai.net/pub/thailinux/software/libthai/%{name}-%{version}.tar.xz
+Source0:	https://github.com/tlwg/libdatrie/releases/download/v%{version}/%{name}-%{version}.tar.xz
 BuildRequires:	doxygen
 BuildRequires:	pkgconfig
 
@@ -24,9 +24,6 @@ dictionaries.
 
 %package -n	trietool
 Summary:	Trie manipulation tool
-
-
-
 Group:		Databases
 Provides:	%{name} = %{EVRD}
 
@@ -35,9 +32,6 @@ Trietool is a trie manipulation tool.
 
 %package -n	%{libname}
 Summary:	Double-array structure for representing trie
-
-
-
 Group:		System/Libraries
 
 %description -n	%{libname}
@@ -51,9 +45,6 @@ dictionaries.
 
 %package -n	%{devname}
 Summary:	Double-array structure for representing trie
-
-
-
 Group:		Development/C
 Requires:	%{libname} = %{EVRD}
 Provides:	datrie-devel = %{EVRD}
@@ -64,21 +55,21 @@ This package includes the header files and developer docs for the libdatrie
 package.
 
 %prep
-%setup -q
+%autosetup -p1
 
 %build
 %configure \
 	--disable-static
-%make
+%make_build
 
 %install
-%makeinstall_std
+%make_install
 
 rm -rf %{buildroot}%{_datadir}/doc/datrie/html
 
 %files -n trietool
 %{_bindir}/trietool*
-%{_mandir}/man1/trietool*.1*
+%doc %{_mandir}/man1/trietool*.1*
 
 %files -n %{libname}
 %{_libdir}/libdatrie.so.%{major}*
