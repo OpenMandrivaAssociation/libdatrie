@@ -78,7 +78,6 @@ rm -rf %{buildroot}%{_datadir}/doc/datrie/html
 
 %files -n %{devname}
 %doc README AUTHORS NEWS
-%{_docdir}/%{name}/README.migration
 %{_includedir}/datrie
 %{_libdir}/libdatrie.so
 %{_libdir}/pkgconfig/*
