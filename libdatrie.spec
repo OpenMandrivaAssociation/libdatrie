@@ -10,7 +10,7 @@ Version:	0.2.13
 Release:	2
 License:	LGPLv2+ and GPLv2+
 Group:		System/Libraries
-Url:		http://linux.thai.net
+Url:		https://linux.thai.net
 Source0:	https://github.com/tlwg/libdatrie/releases/download/v%{version}/%{name}-%{version}.tar.xz
 BuildRequires:	doxygen
 BuildRequires:	pkgconfig
