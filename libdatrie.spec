@@ -12,6 +12,11 @@ License:	LGPLv2+ and GPLv2+
 Group:		System/Libraries
 Url:		https://linux.thai.net
 Source0:	https://github.com/tlwg/libdatrie/releases/download/v%{version}/%{name}-%{version}.tar.xz
+BuildRequires:	autoconf
+BuildRequires:	automake
+BuildRequires:	libtool-base
+BuildRequires:	slibtool
+BuildRequires:	make
 BuildRequires:	doxygen
 BuildRequires:	pkgconfig
 
